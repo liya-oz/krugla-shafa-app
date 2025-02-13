@@ -1,0 +1,1 @@
+# krugla-shafa-app
