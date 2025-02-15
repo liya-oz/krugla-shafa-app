@@ -1,3 +1,4 @@
+/* Navbar */
 .navbar {
   padding: 1rem;
   background: #eee;
@@ -52,4 +53,54 @@
   background: none;
   border: none;
   cursor: pointer;
+}
+/* Footer */
+.footer {
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer .social-media a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer .social-media a:hover {
+  color: #888;
+}
+
+.footer .address p,
+.footer .company-info p {
+  margin: 5px 0;
+}
+
+.footer .footer-nav {
+  margin-top: 20px;
+}
+
+.footer .footer-nav a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.footer .footer-nav a:hover {
+  color: #888;
+}
+
+.footer .address p svg,
+.footer .company-info p svg {
+  margin-right: 8px;
 }
