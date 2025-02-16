@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ShoppingCart, Globe } from "lucide-react";
 import logo from "../assets/logo.png";
-import "../App.css";
+import "./navbar.css"
 
 function Navbar() {
   const [language, setLanguage] = useState("en");
