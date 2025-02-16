@@ -1,17 +1,17 @@
-/* Navbar */
 .navbar {
   padding: 1rem;
-  background: #eee;
+  background: #f9f9f9; 
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
 .navbar-logo {
   font-weight: bold;
   font-size: 1.5rem;
   display: flex;
   align-items: center;
+  color: #2c2c2c; 
 }
 
 .logo {
@@ -29,7 +29,12 @@
 
 .navbar-links li a {
   text-decoration: none;
-  color: black;
+  color: #2c2c2c; 
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-links li a:hover {
+  color: #888;
 }
 
 .navbar-icons {
@@ -38,28 +43,51 @@
   align-items: center;
 }
 
+.navbar-icons a {
+  color: #2c2c2c;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-icons a:hover {
+  color: #888; 
+}
+
 .language-button {
   background: none;
   border: none;
   cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.language-button:hover {
+  color: #888;
 }
 
 .language-text {
   margin-left: 0.5rem;
   text-transform: uppercase;
+  color: #2c2c2c; 
 }
 
 .cart-button {
   background: none;
   border: none;
   cursor: pointer;
+  transition: color 0.3s ease-in-out;
 }
+
+.cart-button:hover {
+  color: #888;
+}
+
 /* Footer */
 .footer {
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #f9f9f9;
+  color: #2c2c2c; 
   padding: 20px;
   text-align: center;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); 
 }
 
 .footer .footer-content {
@@ -72,9 +100,10 @@
 }
 
 .footer .social-media a {
-  color: #333;
+  color: #2c2c2c;
   text-decoration: none;
   margin: 0 10px;
+  transition: color 0.3s ease-in-out;
 }
 
 .footer .social-media a:hover {
@@ -84,6 +113,7 @@
 .footer .address p,
 .footer .company-info p {
   margin: 5px 0;
+  color: #5c5c5c;
 }
 
 .footer .footer-nav {
@@ -91,9 +121,10 @@
 }
 
 .footer .footer-nav a {
-  color: #333;
+  color: #2c2c2c;
   text-decoration: none;
   margin: 0 15px;
+  transition: color 0.3s ease-in-out;
 }
 
 .footer .footer-nav a:hover {
