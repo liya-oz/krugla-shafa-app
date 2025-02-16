@@ -86,11 +86,11 @@
 }
 
 .slider-navigation label:hover {
-  background-color: #2c2c2c;
+  background-color: #013535;;
   transform: scale(1.2);
 }
 
 .slider-navigation label.active {
-  background-color: #2c2c2c;
+  background-color:#015c5c;;
   transform: scale(1.3);
 }
