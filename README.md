@@ -1,124 +1,142 @@
-# Krugla Shafa App
+# **Krugla Shafa App** 🛋️✨  
+**Custom Handmade Furniture for Every Space**  
 
-This is a **web application** about a company that produces handmade furniture. The application will provide an elegant, user-friendly experience, allowing users to browse, filter, and purchase high-quality handmade furniture.
+🌐 **Live Demo:** [Krugla Shafa App](https://resonant-empanada-860d1d.netlify.app)  
 
- As a fake products I going to use this API:
-<https://furniture-api.fly.dev/>
+## **📌 Overview**  
+Krugla Shafa App is a **modern, user-friendly e-commerce platform** specializing in **handmade furniture**. Unlike mass-produced furniture, our philosophy is:  
 
-- **Color Palette:** Cool, modern tones such as **deep teal, light aqua, light gray, and navy** for a fresh and clean aesthetic.
-- **Design Principles:** Minimalistic, clean, and easy-to-navigate UI with a focus on usability and aesthetics.
+> "We create furniture for needs, not make you buy furniture first and then think about what to put in later."  
 
-## Features
-
-### 🏆 **Must-Have**
-
-- **Multi-Page Navigation**: Home, Store, Catalogue, Purchased (Cart), Contact, About pages.
-- **Product Listing Page (Store)**: Fetch and display furniture products from an API.
-- **Product Filtering**: Filter products based on category (kitchen, bedroom, etc.).
-- **Product Detail Page**: View detailed information, including images, price, and description.
-- **Shopping Cart (Context API)**: Users can add/remove products and see total cost.
-- **Contact Page**: A working form where customers can send inquiries.
-- **Responsive Design**
-- **Global Navigation & Footer**: Easy navigation across all pages.
-
-### **Nice-to-Have Features**
-
-- **Search Functionality**: Allow users to search for furniture by name.
-- **Wishlist Feature**: Users can save products they like.
-- **Instagram Gallery Integration**: Display latest Instagram posts from the company.
-- **Multi-Language Support**
-- **Smooth Animations & Transitions**
-- **User Reviews & Ratings**
-
-## Tech Stack
-
-- **React.js, React Context API, React Router, Netlify**
+Our platform allows users to **browse** ready-made collections, **request custom furniture**, and **seamlessly shop online**.
 
 ---
 
-# **My development plan:**
+## **🎨 Design Principles**  
+- **Minimalistic & Clean UI** – Easy navigation with a fresh aesthetic.  
+- **Cool, Modern Color Palette** – Deep teal, light aqua, light gray, and navy.  
+- **Smooth Animations & Transitions** – Providing an enjoyable shopping experience.  
 
-## 1. Define Routing for Pages
+---
 
-- Create routes for **Home, Store, Catalogue, Purchased, Contact, About** in `AppRouter.jsx`.
-- Test navigation between pages with `<Link>` components.
+## **🚀 Features**  
 
-## 2. Build Common UI Components
+### **🏆 Must-Have Features (Implemented)**  
+✔️ **Multi-Page Navigation** – Home, Store, Catalogue, Cart (Purchased), Contact, and About pages.  
+✔️ **Product Listing Page (Store)** – Fetching products from [Furniture API](https://furniture-api.fly.dev/).  
+✔️ **Product Detail Page** – Displays images, price, and description.  
+✔️ **Shopping Cart (Context API)** – Users can add/remove products, see total cost, and proceed to checkout.  
+✔️ **Global Navigation & Footer** – Seamless navigation across all pages.  
+✔️ **Responsive Design** – Works well on all devices.  
 
-### Header (Navigation Bar)
+### **✨ Nice-to-Have Features (Partially Implemented or Planned)**  
+✔️ **Product Filtering** – Filter by category (kitchen, bedroom, etc.).  
+ **Multi-Language Support** – Toggle between languages.  
+ **Wishlist Feature** – Save favorite products for later.  
+✔️ **Infinite Scrolling** – Load more products dynamically.  
+✔️ **User-Friendly Order Submission** – Mimics an API call for a smooth experience.  
+✔️ **Shopping Cart Total Cost** – Displays total price dynamically.  
+✔️ **Smooth Animations** – Enhances UI interaction.  
 
-- Add a **logo**, **search bar**, **purchased button**, and **language switcher**.
-- Include links to all pages.
+---
 
-### Footer
+## **🛒 Shopping & Ordering Process**  
 
-- Include **company logo, social media links, address, and navigation links**.
+### **1️⃣ Browse & Select**  
+- Users can explore **ready-made collections** or choose to **customize** furniture.  
 
-## 3. Apply Global Styling
+### **2️⃣ Add to Cart**  
+- The **shopping cart dynamically calculates total cost**.  
 
-- Set up **CSS structure** (`globals.css`, component-specific styles)\
+### **3️⃣ Submit Order**  
+- Users **fill out a form** to place an order.  
+- The app **simulates an API call** and logs the form data.  
+- A **confirmation message appears** (`alert("Your order has been submitted successfully!")`).  
+- The user is **redirected to the Store page** (`navigate("/store")`).  
 
-## 4. Home Page Development
+---
 
-- Add a **hero section** with **Project 1 (photos + text)**.
-- Implement a **slider** with **3-4 project examples**.
-- Fetch and display **6-8 images from Instagram** in a responsive layout.
+## **🌍 Multi-Language Support**  
+- **Toggle between English & Turkish** with a simple button click.  
+- The entire **UI updates dynamically**.  
 
-## 5. Build Store Page (Product Cards Grid)
+---
 
-- Fetch product data from the **API**.
-- Display products in a **grid format with images, names, and prices**.
-- Implement **filtering** (e.g., by price, category).
-- Enable **infinite scrolling**.
+## **📂 Project Structure**  
+```
+krugla-shafa-app/
+│── public/                   # Static assets
+│── src/                      # Main application source code
+│   ├── api/                  # API-related functions
+│   ├── assets/               # Images, icons, and fonts
+│   ├── components/           # Reusable UI components (buttons, cards, etc.)
+│   ├── context/              # Global state management (Cart, Favorites, Language)
+│   ├── hooks/                # Custom React hooks
+│   ├── pages/                # Page components (Home, Store, Contact, etc.)
+│   ├── styles/               # CSS and styling files
+│   ├── utils/                # Utility functions
+│   ├── App.css               # Global styles
+│   ├── App.jsx               # Main App component
+│   ├── index.css             # Base styles
+│   ├── main.jsx              # Application entry point
+│── index.html                # HTML template
+│── LICENSE                   # License file
+│── README.md                 # Project documentation
 
-## 6. Build Catalogue Page (Product Categories)
+```
+---
 
-- Create sections for **kitchen, bedroom, living room, etc.**
-- Allow users to browse by **category**.
-- Ensure clicking on a **category** shows relevant products.
+## **🛠️ Tech Stack**  
+| **Technology** | **Purpose** |
+|---------------|------------|
+| **React.js**  | Frontend framework |
+| **React Router** | Page navigation |
+| **Context API** | Global state management |
+| **Netlify** | Deployment |
 
-## 7. Build Purchased Page
+---
 
-- Implement a **shopping cart feature** using React Context API.
-- Show a **list of selected products** with total price.
-- Include a **checkout button** (for now, just display an alert or confirmation).
+## **📂 Pages & Routing**  
 
-## 8. Build Contact Page
+| **Page**        | **Route**             | **Description** |
+|----------------|----------------------|----------------|
+| **Home**       | `/`                  | Landing page with featured furniture. |
+| **Store**      | `/store`              | View & filter furniture collections. |
+| **Catalogue**  | `/catalogue`          | Browse all available furniture categories. |
+| **Purchased**  | `/purchased`          | View your selected items & total cost. |
+| **Contact**    | `/contact`            | Submit a custom furniture request. |
+| **About**      | `/about`              | Learn more about Krugla Shafa. |
+| **Product Detail** | `/products/:sku`   | View detailed info about a selected product. |
 
-- Add a **contact form** with **name, email, and message fields**.
-- Include **validation** (ensure all fields are filled correctly).
-- Add a **submit button** (store data in state for now).
+🔹 **Dynamic Routing**:  
+The **Product Detail** page uses a `sku` parameter (`/products/:sku`) to display individual product details dynamically.
 
-## 9. Build About Page
+---
 
-- Add a section with **company info, mission, and team photos**.
+## **💻 Installation & Setup**  
+Follow these steps to **run the app locally**:
 
-## 10. Implement Language Switching
+### **1️⃣ Clone the Repository**
+```sh
+git clone https://github.com/liya-oz/krugla-shafa-app.git
+cd krugla-shafa-app
+```
 
-- Create a **button** to switch between **two languages** (e.g., English and Ukrainian).
-- Store the **selected language in state** and update text accordingly.
+### **2️⃣ Install Dependencies**
+```sh
+npm install
+```
 
-## 11. Add Search Functionality
+### **3️⃣ Start the Development Server**
+```sh
+npm start
+```
+This will open **http://localhost:3000** in your browser.
 
-- Implement a **search bar** that allows users to find products by name.
-- **Highlight results** dynamically as the user types.
+---
+The app is **deployed on Netlify** and accessible at: [Krugla Shafa App](https://resonant-empanada-860d1d.netlify.app)  
 
-## 12. Optimize Responsiveness
+---
 
-## 13. Test & Fix Bugs
-
-- Debug any **navigation issues, API errors, or UI problems**.
-- Ensure **smooth functionality** across all pages.
-
-## 14. Write a README File
-
-- Include **project description, features, setup instructions, and usage guide**.
-
-## 15. Deploy the Website
-
-- Perform final **testing** on different devices and browsers.
-- Fix any **remaining issues** before launch
-
-## 16. Final Testing & Bug Fixing
-
-- Deploy using **Netlify**.
+## **📜 License**
+This project is licensed under the **MIT License**.
