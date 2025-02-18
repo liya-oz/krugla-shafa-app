@@ -14,48 +14,42 @@ export const BasketProvider = ({ children }) => {
   const [basket, setBasket] = useState([]);
 
   const addToBasket = (product) => {
-    setBasket((prevBasket) => {
-      const existingProduct = prevBasket.find(item => item.id === product.id);
-      if (existingProduct) {
-        return prevBasket.map(item =>
+    setBasket((prev) => {
+      const existing = prev.find((item) => item.id === product.id);
+      if (existing) {
+        return prev.map((item) =>
           item.id === product.id
             ? { ...item, quantity: item.quantity + 1 }
             : item
         );
-      } else {
-        return [...prevBasket, { ...product, quantity: 1 }];
       }
+      return [...prev, { ...product, quantity: 1 }];
     });
-    console.log("✅ Item added to basket:", product);
   };
 
   const removeFromBasket = (id) => {
-    setBasket((prevBasket) => prevBasket.filter((item) => item.id !== id));
-    console.log("❌ Item removed from basket:", id);
+    setBasket((prev) => prev.filter((item) => item.id !== id));
   };
 
   const increaseQuantity = (id) => {
-    setBasket((prevBasket) =>
-      prevBasket.map(item =>
+    setBasket((prev) =>
+      prev.map((item) =>
         item.id === id ? { ...item, quantity: item.quantity + 1 } : item
       )
     );
-    console.log("🔺 Increased quantity for id:", id);
   };
 
   const decreaseQuantity = (id) => {
-    setBasket((prevBasket) =>
-      prevBasket.map(item =>
+    setBasket((prev) =>
+      prev.map((item) =>
         item.id === id
           ? { ...item, quantity: Math.max(1, item.quantity - 1) }
           : item
       )
     );
-    console.log("🔻 Decreased quantity for id:", id);
   };
 
   useEffect(() => {
-    console.log("🛒 Basket Updated:", basket);
   }, [basket]);
 
   return (
