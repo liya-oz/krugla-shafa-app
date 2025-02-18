@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import useInfiniteScroll from "../hooks/useInfiniteScroll";
 import ProductItem from "./ProductItem";
-import "../styles/ProductList.css";
 import { Loader2 } from "lucide-react";
 
 function ProductList() {

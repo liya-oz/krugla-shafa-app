@@ -2,12 +2,22 @@
   padding: var(--spacing-lg);
   background: #f8f8f8;
   margin-top: 30px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .store-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: var(--spacing-md);
+  justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .store-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
 }
 
 .loading-spinner {
@@ -22,6 +32,10 @@
 }
 
 @keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

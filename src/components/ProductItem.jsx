@@ -23,30 +23,35 @@ const ProductItem = forwardRef(function ProductItem({ product }, ref) {
 
   const handleAddToBasket = (e) => {
     e.stopPropagation();
-    console.log("🛒 Button Clicked: Adding to Basket", product);
     addToBasket(product);
     setAdded(true);
   };
 
   return (
-    <div className="product-card" ref={ref} onClick={handleCardClick}>
-      <div className="product-image-container">
-        <img src={product.image_path} alt={product.name} />
-      </div>
-      <button 
-        className="basket-button" 
-        onClick={handleAddToBasket}
-        disabled={added}
-        title={added ? "Added to Basket" : "Add to Basket"}
-      >
-        {added 
-          ? <Check size={24} stroke="green" /> 
-          : <ShoppingCart size={24} stroke="black" />
-        }
-      </button>
-      <h3>{product.name}</h3>
+<div className="product-card" ref={ref} onClick={handleCardClick}>
+  <div className="product-image-container">
+    <img src={product.image_path} alt={product.name} />
+  </div>
+
+  <button 
+    className="basket-button" 
+    onClick={handleAddToBasket}
+    disabled={added}
+    title={added ? "Added to Basket" : "Add to Basket"}
+  >
+    {added 
+      ? <Check size={24} stroke="green" /> 
+      : <ShoppingCart size={24} stroke="black" />
+    }
+  </button>
+
+  <div className="product-details">
+    <div className="product-info">
+      <h3 className="product-title">{product.name}</h3>
       <p className="price">${product.price}</p>
     </div>
+  </div>
+</div>
   );
 });
 

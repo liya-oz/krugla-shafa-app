@@ -3,17 +3,30 @@
   flex-direction: column;
   align-items: center;
   padding: 2rem;
+  padding-top: 4rem;
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+.product-detail-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
 .product-detail-image img {
   width: 100%;
-  max-width: 500px;
+  max-width: 400px;
+  height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1400px) {
+  .product-detail-image img {
+    max-width: 350px;
+  }
 }
 
 .product-detail-info {
@@ -22,7 +35,7 @@
   flex-direction: column;
   width: 100%;
   max-width: 600px;
-  min-height: 500px; 
+  min-height: 500px;
   padding-bottom: 80px;
 }
 
@@ -56,74 +69,6 @@
   color: #444;
 }
 
-
-.back-to-store {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.back-to-store a {
-  text-decoration: none;
-  color: #007bff;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-.back-to-store a:hover {
-  color: #0056b3;
-  text-decoration: underline;
-}
-
-
-.product-detail-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.product-detail-image img {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.product-detail-info {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 600px;
-}
-
-.product-detail-info h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #333;
-}
-
-.product-detail-info .price {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #007bff;
-}
-
-.product-detail-info .original-price {
-  text-decoration: line-through;
-  font-size: 1rem;
-  color: #888;
-  margin-left: 0.5rem;
-}
-
-.product-detail-info .description {
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-  color: #555;
-}
-
 .product-specs {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -152,12 +97,10 @@
   color: #333;
 }
 
-.product-detail-info p {
-  margin-bottom: 0.75rem;
-  color: #444;
-}
-
 .basket-button {
+  position: absolute;
+  bottom: 20px;
+  left: 30%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -170,7 +113,21 @@
   font-size: 1.2rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  position: absolute;
-  bottom: 20px;
-  left: 30%;
+}
+
+.back-to-store {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.back-to-store a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.back-to-store a:hover {
+  color: #0056b3;
+  text-decoration: underline;
 }
