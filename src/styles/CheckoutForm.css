@@ -45,7 +45,6 @@
 }
 
 button[type="submit"] {
-  background-color: #007bff;
   color: #fff;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -55,10 +54,6 @@ button[type="submit"] {
   transition: background-color 0.3s ease;
   display: block;
   margin: 1rem auto;
-}
-
-button[type="submit"]:hover:not(:disabled) {
-  background-color: #0056b3;
 }
 
 button[type="submit"]:disabled {

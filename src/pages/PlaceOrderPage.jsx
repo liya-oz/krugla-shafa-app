@@ -8,9 +8,6 @@ function Contact() {
     <div className="contact-container">
       <h1>Place Your Order</h1>
       <CheckoutForm />
-      <div className="back-home">
-        <Link to="/">← Back to Home</Link>
-      </div>
     </div>
   );
 }

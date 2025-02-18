@@ -20,7 +20,7 @@ function Purchased() {
 
   return (
     <div className="purchased-container">
-      <h2>🛒 Your Basket</h2>
+      <h2>Your Basket</h2>
       {basket.length > 0 ? (
         <>
           {basket.map((product) => (

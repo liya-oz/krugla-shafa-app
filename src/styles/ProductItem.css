@@ -19,7 +19,6 @@
   height: auto;
 }
 
-/* Price & Category */
 .price {
   font-size: 1.2rem;
   color: var(--primary-color);
@@ -31,7 +30,6 @@
   color: var(--text-color);
 }
 
-/* ===================== Basket Button (Icon-Driven) ===================== */
 .basket-button {
   background: none;
   border: none;

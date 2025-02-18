@@ -1,8 +1,7 @@
-/* Purchased.css */
-
 .purchased-container {
   max-width: 800px;
   margin: 0 auto;
+  margin-top: 40px;
   padding: 20px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #333;
