@@ -22,8 +22,8 @@ function Navbar() {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/store">Store</Link></li>
         <li><Link to="/catalogue">Catalogue</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-        <li><Link to="/about">About</Link></li>
+        <li><Link to="/contact">Make Order</Link></li>
+        <li><Link to="/about">Our Company</Link></li>
       </ul>
       <div className="navbar-icons">
 

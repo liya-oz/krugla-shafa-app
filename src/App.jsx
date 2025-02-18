@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import Store from "./pages/Store";
 import Catalogue from "./pages/Catalogue";
 import Purchased from "./pages/Purchased"; 
-import Contact from "./pages/Contact";
+import Contact from "./pages/PlaceOrderPage";
 import About from "./pages/About";
 import ErrorBoundary from "./components/ErrorBoundary";
 import ProductDetail from "./pages/ProductDetail";
