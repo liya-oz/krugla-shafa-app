@@ -1,16 +1,15 @@
 .store-container {
   padding: var(--spacing-lg);
   background: #f8f8f8;
+  margin-top: 30px;
 }
 
-/* Store Grid Layout */
 .store-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--spacing-md);
 }
 
-/* ===================== Loading Spinner ===================== */
 .loading-spinner {
   display: flex;
   justify-content: center;
@@ -18,15 +17,11 @@
   padding: 20px;
 }
 
-/* Spinner Icon Animation */
 .spinner-icon {
   animation: spin 1s linear infinite;
 }
 
-/* Keyframes for spinning */
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-
-/* Additional styles for store cards, images, etc. remain unchanged */

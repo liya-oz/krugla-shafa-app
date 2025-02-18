@@ -1,15 +1,22 @@
 import React from "react";
 import { useBasket } from "../context/BasketContext";
 import { Minus, Plus, Trash } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import "../styles/Purchased.css";
 
 function Purchased() {
   const { basket, removeFromBasket, increaseQuantity, decreaseQuantity } = useBasket();
+  const navigate = useNavigate();
 
   const totalCost = basket.reduce(
     (total, product) => total + product.price * product.quantity,
     0
   );
+
+  const handlePlaceOrder = () => {
+    // Navigate to the contact page for order submission
+    navigate("/contact");
+  };
 
   return (
     <div className="purchased-container">
@@ -50,6 +57,14 @@ function Purchased() {
           ))}
           <div className="basket-total">
             <h3>Total Cost: ${totalCost.toFixed(2)}</h3>
+          </div>
+          <div className="basket-submit">
+            <button 
+              className="submit-order-button" 
+              onClick={handlePlaceOrder}
+            >
+              Place Order
+            </button>
           </div>
         </>
       ) : (

@@ -1,0 +1,96 @@
+.about-container {
+  max-width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 1.5rem;
+  text-align: center;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.about-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+  font-weight: 700;
+}
+
+.about-container h2 {
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+  font-weight: 600;
+}
+
+.about-container p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.contact-info {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: #e8f0fe;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.contact-link {
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.back-to-home {
+  margin-top: 1.5rem;
+}
+
+.back-to-home a {
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.back-to-home a:hover {
+  background: #a5b1a9;
+  color: rgb(133, 143, 140);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .about-container {
+    padding: 1rem;
+  }
+
+  .about-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .about-container p {
+    font-size: 0.95rem;
+  }
+
+  .back-to-home a {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}

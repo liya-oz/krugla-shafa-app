@@ -33,7 +33,7 @@ const Store = () => {
 
   return (
     <div className="store-container">
-      <h1>🛋️ Our Furniture Collection</h1>
+      <h2>Ready-Made Furniture</h2>
       {error && <p className="error-text">Error: {error}</p>}
       {!loading && products.length === 0 && <p>⚠️ No products available.</p>}
       <div className="store-grid">

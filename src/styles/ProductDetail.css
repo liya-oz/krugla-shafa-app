@@ -8,6 +8,7 @@
   margin: 0 auto;
 }
 
+
 .product-detail-image img {
   width: 100%;
   max-width: 500px;
@@ -16,10 +17,13 @@
 }
 
 .product-detail-info {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 600px;
+  min-height: 500px; 
+  padding-bottom: 80px;
 }
 
 .product-detail-info h2 {
@@ -51,6 +55,7 @@
   margin-bottom: 0.75rem;
   color: #444;
 }
+
 
 .back-to-store {
   margin-top: 2rem;
@@ -150,4 +155,22 @@
 .product-detail-info p {
   margin-bottom: 0.75rem;
   color: #444;
+}
+
+.basket-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  padding: 1rem 1.5rem;
+  background-color: white;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  bottom: 20px;
+  left: 30%;
 }
