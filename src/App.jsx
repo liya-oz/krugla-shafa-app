@@ -10,6 +10,7 @@ import Purchased from "./pages/Purchased";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import ErrorBoundary from "./components/ErrorBoundary";
+import ProductDetail from "./pages/ProductDetail";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
               <Route path="/purchased" element={<Purchased />} /> 
               <Route path="/contact" element={<Contact />} />
               <Route path="/about" element={<About />} />
+              <Route path="/products/:sku" element={<ProductDetail />} />
             </Routes>
             <Footer />
           </ErrorBoundary>
