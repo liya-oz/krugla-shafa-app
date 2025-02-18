@@ -7,23 +7,42 @@ const useFetch = (url, offset = 0, limit = 10) => {
   const [hasMore, setHasMore] = useState(true);
 
   useEffect(() => {
+    setData([]);
+    setError(null);
+  }, [url]);
+
+  useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const response = await fetch(`${url}?offset=${offset}&limit=${limit}`);
-        const result = await response.json();
+        const connector = url.includes('?') ? '&' : '?';
+        const fullUrl = `${url}${connector}offset=${offset}&limit=${limit}`;
+        const response = await fetch(fullUrl);
+        if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
 
+        const result = await response.json();
         console.log("📥 API Response:", result);
 
         if (result.success && Array.isArray(result.data)) {
+          if (url.includes("category=")) {
+            const params = new URLSearchParams(url.split('?')[1]);
+            const filterCategory = params.get("category");
+            if (filterCategory) {
+              result.data = result.data.filter(
+                product =>
+                  product.category &&
+                  product.category.toLowerCase() === filterCategory.toLowerCase()
+              );
+            }
+          }
+
           setTimeout(() => {
-            setData((prevData) => {
+            setData(prevData => {
               const newProducts = result.data.filter(
-                (product) => !prevData.some((p) => p.id === product.id)
+                product => !prevData.some(p => p.id === product.id)
               );
               return [...prevData, ...newProducts];
             });
-
             setHasMore(result.data.length === limit);
           }, 500);
         } else {
@@ -31,9 +50,9 @@ const useFetch = (url, offset = 0, limit = 10) => {
           throw new Error("Unexpected API response format.");
         }
       } catch (err) {
-        setError("Failed to load data.");
+        setError(err.message || "Failed to load data.");
       } finally {
-        setTimeout(() => setLoading(false), 300); 
+        setTimeout(() => setLoading(false), 300);
       }
     };
 
