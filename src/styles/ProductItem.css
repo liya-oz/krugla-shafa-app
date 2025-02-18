@@ -8,10 +8,13 @@
   position: relative;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
+  max-width: 100%; 
 }
 
-.product-card:hover {
-  transform: translateY(-5px);
+@media (hover: hover) and (pointer: fine) {
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
 }
 
 .product-image-container img {
@@ -55,4 +58,29 @@
 .basket-button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .product-card {
+    padding: var(--spacing-xs);
+  }
+  
+  .price {
+    font-size: 1rem;
+  }
+  
+  .category {
+    font-size: 0.9rem;
+  }
+  
+  .basket-button {
+    bottom: 5px;
+    right: 5px;
+    padding: 6px;
+  }
+  
+  .basket-button svg {
+    width: 20px;
+    height: 20px;
+  }
 }
