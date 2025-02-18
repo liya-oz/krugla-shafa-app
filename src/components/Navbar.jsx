@@ -27,10 +27,10 @@ function Navbar() {
       </ul>
       <div className="navbar-icons">
 
-        <button className="language-button" onClick={toggleLanguage}>
+        {/* <button className="language-button" onClick={toggleLanguage}>
           <Globe size={24} />
           <span className="language-text">{language}</span>
-        </button>
+        </button> */}
 
         <Link to="/purchased" className="cart-button">
           <ShoppingCart size={30} />
