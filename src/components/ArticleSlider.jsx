@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "./articleSlider.css";
+import "../styles/articleSlider.css";
+
 
 const ArticleSlider = () => {
   const [activeSlide, setActiveSlide] = useState(0);

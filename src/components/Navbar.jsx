@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ShoppingCart, Globe } from "lucide-react";
+import { ShoppingCart, Globe, Heart } from "lucide-react";
 import logo from "../assets/logo.png";
-import "./navbar.css"
+import "../styles/navbar.css";
 
 function Navbar() {
   const [language, setLanguage] = useState("en");
@@ -26,10 +26,14 @@ function Navbar() {
         <li><Link to="/about">About</Link></li>
       </ul>
       <div className="navbar-icons">
+
+        {/* ✅ Language Toggle Button */}
         <button className="language-button" onClick={toggleLanguage}>
           <Globe size={24} />
           <span className="language-text">{language}</span>
         </button>
+
+        {/* ✅ Shopping Cart Icon */}
         <Link to="/purchased" className="cart-button">
           <ShoppingCart size={30} />
         </Link>
