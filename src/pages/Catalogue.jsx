@@ -24,7 +24,7 @@ const categories = [
   "vanitory",
   "matress",
   "mirror",
-  "wardrove",
+  "shelf",
   "lamp",
   "tv table",
   "garden",

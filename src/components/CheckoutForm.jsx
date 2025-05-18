@@ -6,103 +6,110 @@ import "../styles/CheckoutForm.css";
 const CheckoutForm = () => {
   const { basket } = useBasket();
   const navigate = useNavigate();
-  
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
     comments: "",
   });
-  
+
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
-  
+
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setError("");
-    
-    if (!formData.firstName || !formData.lastName || !formData.email) {
+
+    const { firstName, lastName, email } = formData;
+    if (!firstName || !lastName || !email) {
       setError("Please fill out all required fields.");
       return;
     }
-    
+
     setSubmitting(true);
     console.log("Order submitted:", { ...formData, basket });
-    
+
     setTimeout(() => {
       setSubmitting(false);
-      alert("Your order has been submitted successfully!");
+      alert("Thanks! Your order was submitted.");
       navigate("/store");
-    }, 1500);
+    }, 1200);
   };
-  
+
   return (
     <div className="checkout-form-container">
       <h2>Checkout</h2>
-      <form onSubmit={handleSubmit}>
+
+      <form onSubmit={handleSubmit} className="checkout-form">
         <div className="form-row">
           <label htmlFor="firstName">First Name*</label>
-          <input 
-            type="text" 
-            id="firstName" 
-            name="firstName" 
-            value={formData.firstName} 
-            onChange={handleChange} 
-            placeholder="John"
-            required 
+          <input
+            id="firstName"
+            name="firstName"
+            type="text"
+            value={formData.firstName}
+            onChange={handleChange}
+            placeholder="Enter your name"
+            required
           />
         </div>
+
         <div className="form-row">
           <label htmlFor="lastName">Last Name*</label>
-          <input 
-            type="text" 
-            id="lastName" 
-            name="lastName" 
-            value={formData.lastName} 
-            onChange={handleChange} 
-            placeholder="Doe"
-            required 
+          <input
+            id="lastName"
+            name="lastName"
+            type="text"
+            value={formData.lastName}
+            onChange={handleChange}
+            placeholder="Enter your surname"
+            required
           />
         </div>
+
         <div className="form-row">
           <label htmlFor="email">Email*</label>
-          <input 
-            type="email" 
-            id="email" 
-            name="email" 
-            value={formData.email} 
-            onChange={handleChange} 
-            placeholder="john.doe@example.com"
-            required 
+          <input
+            id="email"
+            name="email"
+            type="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Add your email"
+            required
           />
         </div>
+
         <div className="form-row">
           <label htmlFor="comments">Comments</label>
-          <textarea 
-            id="comments" 
-            name="comments" 
-            value={formData.comments} 
-            onChange={handleChange} 
-            placeholder="Any additional information..."
+          <textarea
+            id="comments"
+            name="comments"
+            value={formData.comments}
+            onChange={handleChange}
           />
         </div>
+
         {error && <p className="error-text">{error}</p>}
+
         <button type="submit" disabled={submitting}>
-          {submitting ? "Submitting..." : "Place Order"}
+          {submitting ? "Sending..." : "Place Order"}
         </button>
       </form>
-      
+
       <div className="basket-summary">
-        <h3>Basket Summary</h3>
-        {basket.length ? (
+        <h4>You order:</h4>
+        {basket.length > 0 ? (
           <ul>
-            {basket.map((item, index) => (
-              <li key={index}>
-                {item.name} - Quantity: {item.quantity}
+            {basket.map((item, idx) => (
+              <li key={idx}>
+                {item.name} × {item.quantity}
               </li>
             ))}
           </ul>

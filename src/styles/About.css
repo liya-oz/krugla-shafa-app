@@ -71,7 +71,6 @@
   color: rgb(133, 143, 140);
 }
 
-/* Responsive Design */
 @media (max-width: 600px) {
   .about-container {
     padding: 1rem;

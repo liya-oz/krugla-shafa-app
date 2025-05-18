@@ -102,9 +102,6 @@ const ProductDetail = () => {
         >
           {added ? <Check size={24} stroke="green" /> : <ShoppingCart size={24} stroke="black" />}
         </button>
-        <div className="back-to-store">
-          <Link to="/store">← Back to Store</Link>
-        </div>
       </div>
     </div>
   );
