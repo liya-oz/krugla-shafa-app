@@ -1,7 +1,7 @@
 # **Krugla Shafa App** 🛋️✨  
 **Custom Handmade Furniture for Every Space**  
 
-🌐 **Live Demo:** [Krugla Shafa App](https://resonant-empanada-860d1d.netlify.app)  
+🌐 **Live Demo:** [Krugla Shafa App](https://krugla-shafa-app.netlify.app)  
 
 ## **📌 Overview**  
 Krugla Shafa App is a **modern, user-friendly e-commerce platform** specializing in **handmade furniture**. Unlike mass-produced furniture, our philosophy is:  
@@ -129,9 +129,9 @@ npm install
 
 ### **3️⃣ Start the Development Server**
 ```sh
-npm start
+npm run dev
 ```
-This will open **http://localhost:3000** in your browser.
+This will open **http://localhost:5173** in your browser.
 
 ---
 The app is **deployed on Netlify** and accessible at: [Krugla Shafa App](https://resonant-empanada-860d1d.netlify.app)  
