@@ -1,54 +1,86 @@
 .about-container {
-  max-width: 90%;
   max-width: 800px;
-  margin: 0 auto;
-  margin-top: 50px;
-  padding: 1.5rem;
+  margin: 3rem auto;
+  padding: 3rem;
   text-align: center;
-  background: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
+  background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(4px);
+  animation: fadeInAbout 0.6s ease-in-out both;
+  font-size: 0.9rem; 
+  line-height: 1.5;
+}
+
+@keyframes fadeInAbout {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .about-container h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #222;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.about-container h1::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  margin: 0.5rem auto 1rem;
+  background: var(--accent-color);
+  border-radius: 2px;
+  box-shadow: 0 0 6px var(--accent-color);
 }
 
 .about-container h2 {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
+  font-weight: 500;
   margin-top: 1.5rem;
-  font-weight: 600;
+  color: #444;
 }
 
 .about-container p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #444;
+  font-size: 0.9rem;
+  color: #555;
   margin-bottom: 1rem;
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contact-info {
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 0.85rem;
+  font-weight: 500;
   color: #333;
-  margin-top: 1rem;
-  padding: 0.75rem;
   background: #e8f0fe;
-  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
   display: inline-block;
+  margin-top: 1.25rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
 }
 
 .contact-link {
+  color: var(--primary-color);
   font-weight: 500;
   text-decoration: none;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease;
 }
 
 .contact-link:hover {
+  color: var(--accent-color);
   text-decoration: underline;
 }
 
@@ -57,39 +89,45 @@
 }
 
 .back-to-home a {
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 500;
   text-decoration: none;
-  transition: color 0.3s ease-in-out;
-  display: inline-block;
+  background: #dfe4df;
   padding: 0.5rem 1rem;
-  border-radius: 5px;
+  border-radius: 6px;
+  color: #333;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .back-to-home a:hover {
   background: #a5b1a9;
-  color: rgb(133, 143, 140);
+  color: #fff;
 }
 
 @media (max-width: 600px) {
   .about-container {
-    padding: 1rem;
+    padding: 1.25rem;
+    font-size: 0.85rem;
   }
 
   .about-container h1 {
-    font-size: 1.8rem;
+    font-size: 1.35rem;
   }
 
   .about-container h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .about-container p {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+  }
+
+  .contact-info {
+    font-size: 0.8rem;
   }
 
   .back-to-home a {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     padding: 0.4rem 0.8rem;
   }
 }

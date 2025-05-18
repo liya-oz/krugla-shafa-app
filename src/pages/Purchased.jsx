@@ -14,7 +14,6 @@ function Purchased() {
   );
 
   const handlePlaceOrder = () => {
-    // Navigate to the contact page for order submission
     navigate("/contact");
   };
 
