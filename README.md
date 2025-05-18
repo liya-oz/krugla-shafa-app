@@ -1,9 +1,12 @@
-# **Krugla Shafa App** 🛋️✨  
+# **Krugla Shafa App**  
+
 **Custom Handmade Furniture for Every Space**  
 
 🌐 **Live Demo:** [Krugla Shafa App](https://resonant-empanada-860d1d.netlify.app)  
 
+
 ## **📌 Overview**  
+
 Krugla Shafa App is a **modern, user-friendly e-commerce platform** specializing in **handmade furniture**. Unlike mass-produced furniture, our philosophy is:  
 
 > "We create furniture for needs, not make you buy furniture first and then think about what to put in later."  
@@ -13,6 +16,7 @@ Our platform allows users to **browse** ready-made collections, **request custom
 ---
 
 ## **🎨 Design Principles**  
+
 - **Minimalistic & Clean UI** – Easy navigation with a fresh aesthetic.  
 - **Cool, Modern Color Palette** – Deep teal, light aqua, light gray, and navy.  
 - **Smooth Animations & Transitions** – Providing an enjoyable shopping experience.  
@@ -22,6 +26,7 @@ Our platform allows users to **browse** ready-made collections, **request custom
 ## **🚀 Features**  
 
 ### **🏆 Must-Have Features (Implemented)**  
+
 ✔️ **Multi-Page Navigation** – Home, Store, Catalogue, Cart (Purchased), Contact, and About pages.  
 ✔️ **Product Listing Page (Store)** – Fetching products from [Furniture API](https://furniture-api.fly.dev/).  
 ✔️ **Product Detail Page** – Displays images, price, and description.  
@@ -30,6 +35,7 @@ Our platform allows users to **browse** ready-made collections, **request custom
 ✔️ **Responsive Design** – Works well on all devices.  
 
 ### **✨ Nice-to-Have Features (Partially Implemented or Planned)**  
+
 ✔️ **Product Filtering** – Filter by category (kitchen, bedroom, etc.).  
  **Multi-Language Support** – Toggle between languages.  
  **Wishlist Feature** – Save favorite products for later.  
@@ -43,12 +49,15 @@ Our platform allows users to **browse** ready-made collections, **request custom
 ## **🛒 Shopping & Ordering Process**  
 
 ### **1️⃣ Browse & Select**  
+
 - Users can explore **ready-made collections** or choose to **customize** furniture.  
 
 ### **2️⃣ Add to Cart**  
+
 - The **shopping cart dynamically calculates total cost**.  
 
 ### **3️⃣ Submit Order**  
+
 - Users **fill out a form** to place an order.  
 - The app **simulates an API call** and logs the form data.  
 - A **confirmation message appears** (`alert("Your order has been submitted successfully!")`).  
@@ -57,12 +66,14 @@ Our platform allows users to **browse** ready-made collections, **request custom
 ---
 
 ## **🌍 Multi-Language Support**  
+
 - **Toggle between English & Turkish** with a simple button click.  
 - The entire **UI updates dynamically**.  
 
 ---
 
 ## **📂 Project Structure**  
+
 ```
 krugla-shafa-app/
 │── public/                   # Static assets
@@ -84,9 +95,11 @@ krugla-shafa-app/
 │── README.md                 # Project documentation
 
 ```
+
 ---
 
 ## **🛠️ Tech Stack**  
+
 | **Technology** | **Purpose** |
 |---------------|------------|
 | **React.js**  | Frontend framework |
@@ -114,24 +127,29 @@ The **Product Detail** page uses a `sku` parameter (`/products/:sku`) to display
 ---
 
 ## **💻 Installation & Setup**  
+
 Follow these steps to **run the app locally**:
 
 ### **1️⃣ Clone the Repository**
+
 ```sh
 git clone https://github.com/liya-oz/krugla-shafa-app.git
 cd krugla-shafa-app
 ```
 
 ### **2️⃣ Install Dependencies**
+
 ```sh
 npm install
 ```
 
 ### **3️⃣ Start the Development Server**
+
 ```sh
 npm start
 ```
-This will open **http://localhost:3000** in your browser.
+
+This will open **<http://localhost:3000>** in your browser.
 
 ---
 The app is **deployed on Netlify** and accessible at: [Krugla Shafa App](https://resonant-empanada-860d1d.netlify.app)  
@@ -139,4 +157,5 @@ The app is **deployed on Netlify** and accessible at: [Krugla Shafa App](https:/
 ---
 
 ## **📜 License**
+
 This project is licensed under the **MIT License**.
