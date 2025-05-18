@@ -2,7 +2,7 @@
 
 **Custom Handmade Furniture for Every Space**  
 
-🌐 **Live Demo:** [Krugla Shafa App](https://krugla-shafa-app.netlify.app)  
+🌐 **Live Demo:** [Krugla Shafa App](https://krugla-shafa.netlify.app)  
 
 ## **📌 Overview**  
 
